@@ -18,6 +18,8 @@ layout:
 
 # Overview
 
+<figure><img src=".gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+
 The Unreal engine plugin offers an ocean material with Gerstner waves for a sphere.&#x20;
 
 It can be used either on a highly subdivided sphere (such a sphere made in 3d modeling software is included in the plugin), or in any other mesh with a quadtree/octree system offered by other plugins.&#x20;
