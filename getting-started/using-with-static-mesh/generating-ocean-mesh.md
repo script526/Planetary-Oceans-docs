@@ -1,10 +1,10 @@
 # Generating ocean mesh
 
 {% hint style="danger" %}
-Make sure the `BP_PlanetaryOcean` is placed in the world zero. You can move it to desired location after once mesh generation is done. Otherwise, there will be artifacts on the generated mesh.
+Make sure the `BP_PlanetaryOcean` is placed in the world zero. You can move it to the desired location once mesh generation is done. Otherwise, there will be artifacts on the generated mesh.
 {% endhint %}
 
-Hit `Edit Mode` in `BP_PlanetaryOcean`. Change `Sphere Radius`, `Steps` and `Tessellation Level`. In the `Outliner` you should see the `BP_OceanMeshGenerator` spawned, it levarages the Dynamic Mesh Component to generate the mesh and bake it to the static mesh.
+Hit `Edit Mode` in `BP_PlanetaryOcean`. Change `Sphere Radius`, `Steps` and `Tessellation Level`. In the `Outliner` you should see the `BP_OceanMeshGenerator` spawned, it levarages the Dynamic Mesh Component to generate the mesh and bake it into the static mesh.
 
 <div align="left">
 
@@ -12,7 +12,7 @@ Hit `Edit Mode` in `BP_PlanetaryOcean`. Change `Sphere Radius`, `Steps` and `Tes
 
 </div>
 
-Different values gets you different polygon density.
+Different values give different polygon density.
 
 <div align="left">
 
@@ -26,7 +26,7 @@ Different values gets you different polygon density.
 
 </div>
 
-Every time you change any of those values, the resulting mesh info is printed on the screen. If it's not there, look at the output log.
+Every time you change any of those values, the resulting mesh stats is printed on the screen. If it's not there, look at the output log.
 
 <div align="left">
 
@@ -36,7 +36,7 @@ Every time you change any of those values, the resulting mesh info is printed on
 
 Once you're satisfied with the values, hit `Generate Static Mesh` and give it some time to generate, it might freeze the editor. At this point, the wireframe dynamic mesh you see on the screen is being baked into the static mesh, assigned to the `Generated Static Mesh` slot of the ocean BP. This will override the default `SM_OceanMeshGenerated`, but you may replace it with a different mesh before hitting `Generate Static Mesh`, or before entering the `Edit Mode`.
 
-Once the generation is finished, the wireframe dynamic mesh is removed from the level, the generated static mesh is assigned to `Generated Static Mesh` slot and you should now see the ocean.
+Once the generation is finished, the wireframe dynamic mesh is removed from the level, and you should now see the ocean.
 
 {% hint style="warning" %}
 The more triangle count you have, the more expensive it gets for the GPU. The vertex shader calculates waves for every vertex, so you should have as few vertices as possible.&#x20;
