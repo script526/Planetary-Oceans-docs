@@ -9,7 +9,7 @@ Add `BP_PlanetaryOcean` to your level. Optionally, place `BP_Boat` , `BP_FishBoa
 * Size of one quad: 78,68 Cm
 * Quads per meter:  1,27. Which means, you have 2,54 quads along the height of the character (which is 200 units)
 
-If you'd like to change any of those parameters, see Generating ocean mesh.
+If you'd like to change any of those parameters, see [Generating ocean mesh](generating-ocean-mesh.md).
 
 
 
