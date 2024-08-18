@@ -8,7 +8,10 @@ To set up buoyancy on your actor, follow these steps:
 
 1. Add `PlanetaryBuoyancy` component to your Actor blueprint.
 2. In the component settings fill the `Buoyancy Points` array. Vector locations it is asking for are in local space (relative to the root). It is recommended to have more than 4 Buoyancy Points for smoother buoyancy simulation.
-3. Make the Static Mesh Component you want to float as root component. Static Mesh can have any other components attached to it (meshes, cameras, particles etc.)
+
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+1. Make the Static Mesh Component you want to float as root component. Static Mesh can have any other components attached to it (meshes, cameras, particles etc.)
 
 {% hint style="info" %}
 Static Mesh has to have simple collision added. Polygon count doesn't matter, but the complexity of the collision may affect performance. Make sure, you don't have excessive amount of collision primitives with complex geometry.
