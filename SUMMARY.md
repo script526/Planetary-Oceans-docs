@@ -1,12 +1,12 @@
 # Table of contents
 
-## Plugin Version: 1.1
-
-* [Untitled](README.md)
-
 ## HOME
 
-* [Overview](<README (1).md>)
+* [Overview](README.md)
+
+## CURRENT PLUGIN VERSION: 1.1
+
+* [Untitled](current-plugin-version-1.1/untitled.md)
 
 ## GUIDE
 
