@@ -1,8 +1,12 @@
 # Table of contents
 
+## Plugin Version: 1.1
+
+* [Untitled](README.md)
+
 ## HOME
 
-* [Overview](README.md)
+* [Overview](<README (1).md>)
 
 ## GUIDE
 
