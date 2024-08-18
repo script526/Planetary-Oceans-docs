@@ -11,4 +11,4 @@ You have wide variety of parameters, allowing you to achieve the style you're go
 * Wave and beach foam
 * Scrolling normals (textures) on top of wave normals
 
-<figure><img src="../.gitbook/assets/mi.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/mi.png" alt=""><figcaption></figcaption></figure>

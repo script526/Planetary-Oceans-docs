@@ -1,13 +1,21 @@
 # Table of contents
 
+## HOME
+
 * [Overview](README.md)
-* [Getting started](getting-started.md)
-  * [Using just the material (no buoyancy)](getting-started/using-just-the-material-no-buoyancy.md)
-  * [Using with Static Mesh](getting-started/using-with-static-mesh/README.md)
-    * [Generating ocean mesh](getting-started/using-with-static-mesh/generating-ocean-mesh.md)
-  * [Using with Voxel Plugin](getting-started/using-with-voxel-plugin.md)
-* [Buoyancy](buoyancy.md)
-  * [Initial setup](buoyancy/initial-setup.md)
-  * [Performance](buoyancy/performance.md)
-* [Blueprint API](blueprint-api.md)
-* [C++ API](c++-api.md)
+
+## GUIDE
+
+* [Getting started](guide/getting-started/README.md)
+  * [Using just the material (no buoyancy)](guide/getting-started/using-just-the-material-no-buoyancy.md)
+  * [Using with Static Mesh](guide/getting-started/using-with-static-mesh/README.md)
+    * [Generating ocean mesh](guide/getting-started/using-with-static-mesh/generating-ocean-mesh.md)
+  * [Using with Voxel Plugin](guide/getting-started/using-with-voxel-plugin.md)
+* [Buoyancy](guide/buoyancy/README.md)
+  * [Initial setup](guide/buoyancy/initial-setup.md)
+  * [Performance](guide/buoyancy/performance.md)
+
+## REFERENCE
+
+* [Blueprint API](reference/blueprint-api.md)
+* [C++ API](reference/c++-api.md)
