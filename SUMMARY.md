@@ -2,3 +2,4 @@
 
 * [Overview](README.md)
 * [Getting started](getting-started.md)
+* [Buoyancy](buoyancy.md)
