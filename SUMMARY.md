@@ -4,20 +4,16 @@
 
 * [Overview](README.md)
 
-## CURRENT PLUGIN VERSION: 1.1
+## GUIDE (v. 1.1)
 
-* [Untitled](current-plugin-version-1.1/untitled.md)
-
-## GUIDE
-
-* [Getting started](guide/getting-started/README.md)
-  * [Using just the material (no buoyancy)](guide/getting-started/using-just-the-material-no-buoyancy.md)
-  * [Using with Static Mesh](guide/getting-started/using-with-static-mesh/README.md)
-    * [Generating ocean mesh](guide/getting-started/using-with-static-mesh/generating-ocean-mesh.md)
-  * [Using with Voxel Plugin](guide/getting-started/using-with-voxel-plugin.md)
-* [Buoyancy](guide/buoyancy/README.md)
-  * [Initial setup](guide/buoyancy/initial-setup.md)
-  * [Performance](guide/buoyancy/performance.md)
+* [Getting started](guide-v.-1.1/getting-started/README.md)
+  * [Using just the material (no buoyancy)](guide-v.-1.1/getting-started/using-just-the-material-no-buoyancy.md)
+  * [Using with Static Mesh](guide-v.-1.1/getting-started/using-with-static-mesh/README.md)
+    * [Generating ocean mesh](guide-v.-1.1/getting-started/using-with-static-mesh/generating-ocean-mesh.md)
+  * [Using with Voxel Plugin](guide-v.-1.1/getting-started/using-with-voxel-plugin.md)
+* [Buoyancy](guide-v.-1.1/buoyancy/README.md)
+  * [Initial setup](guide-v.-1.1/buoyancy/initial-setup.md)
+  * [Performance](guide-v.-1.1/buoyancy/performance.md)
 
 ## REFERENCE
 
