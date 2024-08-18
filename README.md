@@ -18,7 +18,13 @@ layout:
 
 # Overview
 
-<figure><img src=".gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+
+{% hint style="danger" %}
+The plugin is tageted at Unreal Engine 5.3, 5.4 versions.
+
+Current plugin version: 1.1
+{% endhint %}
 
 The Unreal engine plugin offers an ocean material with Gerstner waves for a sphere.&#x20;
 
