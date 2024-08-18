@@ -4,9 +4,3 @@ PlanetaryBuoyancy component should be attached to an Actor to make it float. Thi
 
 PlanetaryOcean blueprint makes sure to sync wave parameters between the ocean Dynamic Material Instance and the PlanetaryBuoyancy, so that the buoyancy system always gets the same wave parameter values as the material.
 
-{% hint style="info" %}
-Requirements
-
-* Actor that you want to be floating in the ocean should have Static Mesh as a root component.
-* Static Mesh has to have `Simulate Physics` set to true, `Gravity` set to false. If any of these values are different, the Buoyancy Component will set them on `BeginPlay`.
-{% endhint %}
