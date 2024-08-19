@@ -42,7 +42,11 @@ Add both `BP_PlanetaryOcean` and the newly created `BP_VoxelOceanSurface` to the
 
 <figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
 
-Now you should see the Voxel sphere instead of a static mesh, but there are no waves yet. The reason is, in versions 340.0, 340.1, and 340.3 of the Voxel Plugin, the material's world position offset doesn't work. To fix that, go to `Voxel/Shaders/VoxelMarchingCubeVertexFactory.ush` file and on line 135, replace (you don't have to close the editor):
+Now you should see the Voxel sphere instead of a static mesh, but there's no displacement yet (only the normals).
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+The reason is, in versions 340.0, 340.1, and 340.3 of the Voxel Plugin, the material's world position offset doesn't work. To fix that, go to `Voxel/Shaders/VoxelMarchingCubeVertexFactory.ush` file and on line 135, replace:
 
 ```hlsl
 FMaterialVertexParameters Parameters = (FMaterialVertexParameters)0;
@@ -62,4 +66,8 @@ with
 This edit was taken from the commit [3b7b6b6](https://github.com/VoxelPlugin/VoxelPlugin/commit/3b7b6b6d3ce16eb555bbc757dd50128298223d4f) in the Voxel Plugin's dev branch.
 {% endhint %}
 
-Now you should see the waves initialized with the default wave parameters in the Voxel Graph (with the same values as in the default `BP_PlanetaryOcean`). If you have changed some parameters in the Blueprint before switching `MeshMode` to `VoxelPluginsMesh`, you have to tweak them again to trigger the update. Changing a parameter in the Blueprint updates the same parameter in the Voxel Graph, one at a time.
+Restart the editor. Now you should see the waves initialized with the default wave parameters in the Voxel Graph (with the same values as in the default `BP_PlanetaryOcean`).
+
+<figure><img src="../../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
+
+If you have changed some parameters in the Blueprint before switching `MeshMode` to `VoxelPluginsMesh`, you have to tweak them again to trigger the update. Changing a parameter in the Blueprint updates the same parameter in the Voxel Graph, one at a time.
