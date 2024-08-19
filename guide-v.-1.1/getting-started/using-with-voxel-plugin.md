@@ -4,7 +4,7 @@
 Only Voxel Plugin 2.0 versions 340.0, 340.1, and 340.3 are supported. Compatibility with `dev` versions may be possible by replacing outdated nodes in the Voxel Graph.
 {% endhint %}
 
-Unfortunately, distribution of some kind of a drag-and-drop solution as an separate Blueprint is hindered by parent class corruption following the pasting or migration of the asset. So, additional steps are necessary to ensure functionality, although the process was made as easy as possible.
+Unfortunately, distribution of some kind of a drag-and-drop solution as a separate Blueprint is hindered by parent class corruption following the pasting or migration of the asset. So, additional steps are necessary to ensure functionality, although the process was made as easy as possible.
 
 Once the Voxel Plugin is installed, download this Voxel Graph asset. You should drag and drop the file from your download folder in Windows Explorer to your project's folder (don't drag it directly to the editor's content folder). You can also do this while the project is open.
 
