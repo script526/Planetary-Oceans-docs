@@ -1,12 +1,12 @@
 # Voxel Plugin Integration
 
 {% hint style="danger" %}
-Only Voxel Plugin 2.0 versions 340.0, 340.1 340.3 are supported. It might work with dev versions with minimal node replacement in the Voxel Graph.
+Only Voxel Plugin 2.0 versions 340.0, 340.1, and 340.3 are supported. Compatibility with `dev` versions may be possible by replacing outdated nodes in the Voxel Graph.
 {% endhint %}
 
-Unfortunately, distributing drag-and-drop type of solution as a separate Blueprint doesn't work due to parent class corruption after pasting/migrating the asset. So, some additional steps are required to make everything work, but the process was simplified as much as possible.
+Unfortunately, distribution of some kind of a drag-and-drop solution as an separate Blueprint is hindered by parent class corruption following the pasting or migration of the asset. So, additional steps are necessary to ensure functionality, although the process was made as easy as possible.
 
-Once the Voxel Plugin is installed, download this Voxel Graph asset, You should drag and drop the file in the Windows explorer from your download folder to your project Content folder, you can do this also while the project is opened.
+Once the Voxel Plugin is installed, download this Voxel Graph asset. You should drag and drop the file from your download folder in Windows Explorer to your project's folder (don't drag it directly to the editor's content folder). You can also do this while the project is open.
 
 {% file src="../../.gitbook/assets/VG_OceanSphereSurface.uasset" %}
 
@@ -14,13 +14,11 @@ This Voxel Graph should look like this:
 
 <figure><img src="../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
 
-Create a new Blueprint based on VoxelOceanSurface class, let's name it BP\_VoxelOceanSurface.
-
-In the Class Defaults search for Tags, add a tag with the name BP\_VoxelOceanSurface. By this tag BP\_PlanetaryOcean will find this blueprint in the level (it is hardcoded there).
+Create a new Blueprint based on `VoxelOceanSurface` class, let's name it `BP_VoxelOceanSurface`. In the Class Defaults search for Tags, add a tag with the name `BP_VoxelOceanSurface`. This tag will allow `BP_PlanetaryOcean` to locate this blueprint in the level (as it is hardcoded there).
 
 <figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
-Add VoxelComponent (you may rename it to OceanSurface for clarity), and assign the downloaded in the first step VG\_OceanSphereSurface to the Graph slot.
+Add `VoxelComponent` (you may rename it to `OceanSurface` for clarity), and assign the downloaded `VG_OceanSphereSurface` from the first step to the Graph slot.
 
 <div align="left">
 
@@ -28,7 +26,7 @@ Add VoxelComponent (you may rename it to OceanSurface for clarity), and assign t
 
 </div>
 
-In the list of overridable functions there are 4 BlueprintImplementable functions derived from the VoxelOceanSurface class:
+In the list of overridable functions there are 4 `BlueprintImplementable` functions derived from the VoxelOceanSurface class:
 
 <div align="left">
 
@@ -40,11 +38,11 @@ You need to implement them like so:
 
 <figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
 
-Add to the level both BP\_PlanetaryOcean and newly created BP\_VoxelOceanSurface. In the BP\_PlaneratyOcean settings switch MeshMode to VoxelPluginsMesh
+Add both B`P_PlanetaryOcean` and the newly created `BP_VoxelOceanSurface` to the level. In the `BP_PlanetaryOcean` settings, switch `MeshMode` to `VoxelPluginsMesh`.
 
 <figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
 
-Now you should see the Voxel sphere instead of a static mesh, but there're no waves yet. The reason is, in versions 340.0, 340.1 and 340.3 of the Voxel Plugin material's world position offset doesn't work. To fix that, go to Voxel/Shaders/VoxelMarchingCubeVertexFactory.ush file and on the line 135 replace (you don't have to close the editor)
+Now you should see the Voxel sphere instead of a static mesh, but there are no waves yet. The reason is, in versions 340.0, 340.1, and 340.3 of the Voxel Plugin, the material's world position offset doesn't work. To fix that, go to `Voxel/Shaders/VoxelMarchingCubeVertexFactory.ush` file and on line 135, replace (you don't have to close the editor):
 
 ```hlsl
 FMaterialVertexParameters Parameters = (FMaterialVertexParameters)0;
@@ -60,8 +58,8 @@ with
 #endif
 ```
 
-Now you should see the waves, initialized with the default wave parameters in the Voxel Graph (with the same values as in the default BP\_PlanetaryOcean). If you have changed some parameters in the BP before switching MeshMode to VoxelPluginsMesh, you have to tweak them again to trigger the update. Changing some parameter in the BP updates the same parameter in the Voxel Graph, one at a time.
-
-{% hint style="warning" %}
-If you're trying to apply this guide to one of the dev versions of the Voxel Plugin, you might need to replace some nodes in the Voxel Graph to make it work.
+{% hint style="info" %}
+This edit was taken from the commit [3b7b6b6](https://github.com/VoxelPlugin/VoxelPlugin/commit/3b7b6b6d3ce16eb555bbc757dd50128298223d4f) in the Voxel Plugin's dev branch.
 {% endhint %}
+
+Now you should see the waves initialized with the default wave parameters in the Voxel Graph (with the same values as in the default `BP_PlanetaryOcean`). If you have changed some parameters in the Blueprint before switching `MeshMode` to `VoxelPluginsMesh`, you have to tweak them again to trigger the update. Changing a parameter in the Blueprint updates the same parameter in the Voxel Graph, one at a time.
