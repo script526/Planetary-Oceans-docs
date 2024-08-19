@@ -1,6 +1,6 @@
 # Getting started
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
 
 The workflow you need to follow depends on the following considerations:
 

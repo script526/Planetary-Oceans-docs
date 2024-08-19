@@ -8,7 +8,7 @@ Hit `Edit Mode` in `BP_PlanetaryOcean`. Change `Sphere Radius`, `Steps` and `Tes
 
 <div align="left">
 
-<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
@@ -16,13 +16,13 @@ Different values give different polygon density.
 
 <div align="left">
 
-<figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption><p>Tesselation Level: 10</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption><p>Tesselation Level: 10</p></figcaption></figure>
 
 </div>
 
 <div align="left">
 
-<figure><img src="../../../.gitbook/assets/image (5).png" alt=""><figcaption><p>Tesselation Level: 2</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (5) (1).png" alt=""><figcaption><p>Tesselation Level: 2</p></figcaption></figure>
 
 </div>
 
@@ -30,7 +30,7 @@ Every time you change any of those values, the resulting mesh stats is printed o
 
 <div align="left">
 
-<figure><img src="../../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
 
 </div>
 

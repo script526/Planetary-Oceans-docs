@@ -18,7 +18,7 @@ layout:
 
 # Overview
 
-<figure><img src=".gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="danger" %}
 The plugin is targeted at Unreal Engine versions 5.3 and 5.4.
