@@ -38,7 +38,7 @@ You need to implement them like so:
 
 <figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
 
-Add both B`P_PlanetaryOcean` and the newly created `BP_VoxelOceanSurface` to the level. In the `BP_PlanetaryOcean` settings, switch `MeshMode` to `VoxelPluginsMesh`.
+Add both `BP_PlanetaryOcean` and the newly created `BP_VoxelOceanSurface` to the level. In the `BP_PlanetaryOcean` settings, switch `MeshMode` to `VoxelPluginsMesh`.
 
 <figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
 
