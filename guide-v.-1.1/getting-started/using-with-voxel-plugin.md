@@ -6,19 +6,23 @@ Only Voxel Plugin 2.0 versions 340.0, 340.1, and 340.3 are supported. Compatibil
 
 Unfortunately, distribution of some kind of a drag-and-drop solution as a separate Blueprint is hindered by parent class corruption following the pasting or migration of the asset. So, additional steps are necessary to ensure functionality, although the process was made as easy as possible.
 
-Once the Voxel Plugin is installed, download this Voxel Graph asset. You should drag and drop the file from your download folder in Windows Explorer to your project's folder (don't drag it directly to the editor's content folder). You can also do this while the project is open.
+### Preparations
 
-{% file src="../../.gitbook/assets/VG_OceanSphereSurface.uasset" %}
+Once the Voxel Plugin is installed, download this Voxel Graph asset. It makes a sphere surface and has all necessary wave parameters that will be updated by the ocean BP. You should drag and drop the file from your download folder in Windows Explorer to your project's folder (dragging it directly to the editor's content folder will not work). You can also do this while the project is open.
+
+{% file src="../../.gitbook/assets/VG_OceanSphereSurface (3).uasset" %}
 
 This Voxel Graph should look like this:
 
 <figure><img src="../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
 
+### Creating a BP for Voxel integration
+
 Create a new Blueprint based on `VoxelOceanSurface` class, let's name it `BP_VoxelOceanSurface`. In the Class Defaults search for Tags, add a tag with the name `BP_VoxelOceanSurface`. This tag will allow `BP_PlanetaryOcean` to locate this blueprint in the level (as it is hardcoded there).
 
 <figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
-Add `VoxelComponent` (you may rename it to `OceanSurface` for clarity), and assign the downloaded `VG_OceanSphereSurface` from the first step to the Graph slot.
+Add `VoxelComponent` (you may rename it to `OceanSurface` for clarity), and assign the downloaded earlier `VG_OceanSphereSurface` to the Graph slot.
 
 <div align="left">
 
@@ -46,7 +50,9 @@ Now you should see the Voxel sphere instead of a static mesh, but there's no dis
 
 <figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
-The reason is, in versions 340.0, 340.1, and 340.3 of the Voxel Plugin, the material's world position offset doesn't work. To fix that, go to `Voxel/Shaders/VoxelMarchingCubeVertexFactory.ush` file and on line 135, replace:
+### Fixing WPO in Voxel Plugin
+
+In versions 340.0, 340.1, and 340.3 of the Voxel Plugin, the material's world position offset doesn't work. To fix that, go to `Voxel/Shaders/VoxelMarchingCubeVertexFactory.ush` file and on line 135, replace:
 
 ```hlsl
 FMaterialVertexParameters Parameters = (FMaterialVertexParameters)0;
