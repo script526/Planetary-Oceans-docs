@@ -1,2 +1,0 @@
-# Using with Voxel Plugin
-
