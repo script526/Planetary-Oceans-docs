@@ -6,17 +6,17 @@ Only Voxel Plugin 2.0 versions 340.0, 340.1 340.3 are supported. It might work w
 
 Unfortunately, distributing drag-and-drop type of solution as a separate Blueprint doesn't work due to parent class corruption after pasting/migrating the asset. So, some additional steps are required to make everything work, but the process was simplified as much as possible.
 
-Once the Voxel Plugin is installed, download this Voxel Graph, You should drag and drop the file in the Windows explorer from your download folder to your project Content folder, you can do this also while the project is opened.
+Once the Voxel Plugin is installed, download this Voxel Graph asset, You should drag and drop the file in the Windows explorer from your download folder to your project Content folder, you can do this also while the project is opened.
 
-FILE HERE
+{% file src="../../.gitbook/assets/VG_OceanSphereSurface.uasset" %}
 
 This Voxel Graph should look like this:
 
-<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
 
-Create a new Blueprint named something like BP\_VoxelOceanSurface and open it.
+Create a new Blueprint based on VoxelOceanSurface class, let's name it BP\_VoxelOceanSurface.
 
-In the Class Defaults search for Tags, add a tag with the name  BP\_VoxelOceanSurface. By this tag BP\_PlanetaryOcean will find this blueprint in the level.
+In the Class Defaults search for Tags, add a tag with the name BP\_VoxelOceanSurface. By this tag BP\_PlanetaryOcean will find this blueprint in the level (it is hardcoded there).
 
 <figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
@@ -28,7 +28,15 @@ Add VoxelComponent (you may rename it to OceanSurface for clarity), and assign t
 
 </div>
 
-In the list of overridable functions there are 4 functions you need to override like so:
+In the list of overridable functions there are 4 BlueprintImplementable functions derived from the VoxelOceanSurface class:
+
+<div align="left">
+
+<figure><img src="../../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
+
+</div>
+
+You need to implement them like so:
 
 <figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
 
@@ -36,7 +44,7 @@ Add to the level both BP\_PlanetaryOcean and newly created BP\_VoxelOceanSurface
 
 <figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
 
-Now you should see the Voxel sphere instead of a static mesh, but there're no waves yet. The reason is, in versions 340.0, 340.1 and 340.3 of the Voxel Plugin world position offset didn't work in the material. To fix that, go to VoxelPlugin/Shaders/VoxelMarchingCubeVertexFactory.ush file and on the line 135 replace (you don't have to close the editor)
+Now you should see the Voxel sphere instead of a static mesh, but there're no waves yet. The reason is, in versions 340.0, 340.1 and 340.3 of the Voxel Plugin material's world position offset doesn't work. To fix that, go to Voxel/Shaders/VoxelMarchingCubeVertexFactory.ush file and on the line 135 replace (you don't have to close the editor)
 
 ```hlsl
 FMaterialVertexParameters Parameters = (FMaterialVertexParameters)0;
@@ -52,7 +60,7 @@ with
 #endif
 ```
 
-Now you should see the waves, initialized with the default wave parameters in the Voxel Graph (with the same values as in the default BP\_PlanetaryOcean). If you have changed some parameters in the BP before switching MeshMode to VoxelPluginsMesh, you have to tweak them again to trigger the update. Changing some parameter in the BP updates the same parameter in the Voxel Graph.
+Now you should see the waves, initialized with the default wave parameters in the Voxel Graph (with the same values as in the default BP\_PlanetaryOcean). If you have changed some parameters in the BP before switching MeshMode to VoxelPluginsMesh, you have to tweak them again to trigger the update. Changing some parameter in the BP updates the same parameter in the Voxel Graph, one at a time.
 
 {% hint style="warning" %}
 If you're trying to apply this guide to one of the dev versions of the Voxel Plugin, you might need to replace some nodes in the Voxel Graph to make it work.
