@@ -15,6 +15,10 @@ You have a wide variety of parameters that enable you to achieve the desired sty
 * Waves and beach foam
 * Scrolling normals (textures) on top of wave normals
 
+{% hint style="success" %}
+Sphere with the ocean material can be moved and rotated at runtime.
+{% endhint %}
+
 Utilizing only the material results in a purely visual effect and does not offer [buoyancy](../buoyancy/).
 
 <figure><img src="../../.gitbook/assets/mi.png" alt=""><figcaption></figcaption></figure>

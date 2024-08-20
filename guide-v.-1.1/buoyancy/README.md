@@ -16,3 +16,7 @@ Gravity can be disabled using `bEnableGravity`, and custom gravity solutions can
 
 `PlanetaryOcean` blueprint synchronizes wave parameters between the ocean Dynamic Material Instance and the `PlanetaryBuoyancy` to ensure consistent values for the buoyancy system.
 
+{% hint style="danger" %}
+Buoyancy system reacts to translation of an ocean sphere at runtime (when it moves across the world), but doesn't support sphere rotation.
+{% endhint %}
+
