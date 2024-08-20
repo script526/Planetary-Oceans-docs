@@ -20,3 +20,10 @@ Gravity can be disabled using `bEnableGravity`, and custom gravity solutions can
 Buoyancy system reacts to translation of an ocean sphere at runtime (when it moves across the world), but doesn't support sphere rotation.
 {% endhint %}
 
+{% content-ref url="initial-setup.md" %}
+[initial-setup.md](initial-setup.md)
+{% endcontent-ref %}
+
+{% content-ref url="performance.md" %}
+[performance.md](performance.md)
+{% endcontent-ref %}

@@ -14,3 +14,7 @@ If you wish to modify any of these parameters, see [Generating ocean mesh](gener
 {% hint style="danger" %}
 Avoid scaling the Blueprint or its Static Mesh component.
 {% endhint %}
+
+{% content-ref url="generating-ocean-mesh.md" %}
+[generating-ocean-mesh.md](generating-ocean-mesh.md)
+{% endcontent-ref %}
