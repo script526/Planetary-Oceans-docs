@@ -84,7 +84,7 @@ If you're using Unreal Engine 5.4, you must make one extra edit (see commit [15c
 
 In the `Voxel/Shaders/VoxelMarchingCubeVertexFactory.ush` on line 145 (considering you have already made the edit above), paste:
 
-```
+```hlsl
 #if VOXEL_ENGINE_VERSION >= 504
     Parameters.LWCData = MakeMaterialLWCData(Parameters);
 #endif
