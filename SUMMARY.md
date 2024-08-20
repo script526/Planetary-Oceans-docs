@@ -7,7 +7,7 @@
 ## GUIDE (v. 1.1)
 
 * [Getting started](guide-v.-1.1/getting-started/README.md)
-  * [Using just the material (no buoyancy)](guide-v.-1.1/getting-started/using-just-the-material-no-buoyancy.md)
+  * [Material usage (no buoyancy)](guide-v.-1.1/getting-started/material-usage-no-buoyancy.md)
   * [Using with Static Mesh](guide-v.-1.1/getting-started/using-with-static-mesh/README.md)
     * [Generating ocean mesh](guide-v.-1.1/getting-started/using-with-static-mesh/generating-ocean-mesh.md)
   * [Voxel Plugin Integration](guide-v.-1.1/getting-started/using-with-voxel-plugin.md)
