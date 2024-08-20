@@ -37,7 +37,7 @@ Link to Unreal Marketplace
 * **Gerstner Waves on Spheres**: Achieve lifelike wave dynamics, specifically designed for spherical worlds.
 * **Advanced Buoyancy System**: Bring your ships, objects to life with physics-based buoyancy that interacts seamlessly with the ocean surface.
 * **Multi-Ocean Support**: Populate your world with multiple oceans, each with its own distinct characteristics.
-* **Ocean Mesh Generator**: Generate mesh for the ocean with desired radius and polygin density.
+* **Ocean Mesh Generator**: Generate mesh for the ocean with desired radius and polygon density.
 * [**Voxel Plugin**](https://www.unrealengine.com/marketplace/en-US/product/voxel-plugin) **Integration**: Add planetary oceans to your Voxel Worlds.
 * **Foam Effects**: Enhance realism with wave and beach foam.
 * **Subsurface Scattering**: Add depth to your oceans with realistic light scattering and color blending.
