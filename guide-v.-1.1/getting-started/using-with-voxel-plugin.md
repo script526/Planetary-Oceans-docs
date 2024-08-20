@@ -48,7 +48,7 @@ Add both `BP_PlanetaryOcean` and the newly created `BP_VoxelOceanSurface` to the
 
 Now you should see the Voxel sphere instead of a static mesh, but there's no displacement yet (only the normals).
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Fixing WPO in Voxel Plugin
 
