@@ -18,9 +18,7 @@ This Voxel Graph should look like this:
 
 ### Creating a BP for Voxel integration
 
-Create a new Blueprint based on `VoxelOceanSurface` class, let's name it `BP_VoxelOceanSurface`. In the Class Defaults search for Tags, add a tag with the name `BP_VoxelOceanSurface`. This tag will allow `BP_PlanetaryOcean` to locate this blueprint in the level (as it is hardcoded there).
-
-<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+Create a new Blueprint based on `VoxelOceanSurface` class, let's name it `BP_VoxelOceanSurface`.
 
 Add `VoxelComponent` (you may rename it to `OceanSurface` for clarity), and assign the downloaded earlier `VG_OceanSphereSurface` to the Graph slot.
 
@@ -77,3 +75,17 @@ Restart the editor. Now you should see the waves initialized with the default wa
 <figure><img src="../../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
 
 If you have changed some parameters in the Blueprint before switching `MeshMode` to `VoxelPluginsMesh`, you have to tweak them again to trigger the update. Changing a parameter in the Blueprint updates the same parameter in the Voxel Graph, one at a time.
+
+### If you're on UE 5.4
+
+{% hint style="danger" %}
+If you're using Unreal Engine 5.4, you must make one extra edit (see commit [15c86df](https://github.com/VoxelPlugin/VoxelPlugin/commit/15c86df02b7819b4977da843954fba47f765bf3c)) in addition to the one mentioned above.
+{% endhint %}
+
+In the `Voxel/Shaders/VoxelMarchingCubeVertexFactory.ush` on line 145 (considering you have already made the edit above), paste:
+
+```
+#if VOXEL_ENGINE_VERSION >= 504
+    Parameters.LWCData = MakeMaterialLWCData(Parameters);
+#endif
+```
