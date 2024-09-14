@@ -24,7 +24,7 @@ Integration with the Voxel Plugin made as easy as it gets.
 
 ### Fixing WPO in Voxel Plugin in UE 5.3
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>This is how the oceanlooks when WPO doesn't do anything.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>This is how the ocean looks when WPO doesn't do anything.</p></figcaption></figure>
 
 In versions 340.0, 340.1, and 340.3 of the Voxel Plugin, the material's world position offset doesn't work. To fix that, go to `Voxel/Shaders/VoxelMarchingCubeVertexFactory.ush` file and on line 135, replace:
 
