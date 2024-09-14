@@ -15,6 +15,6 @@ The workflow you choose will depend on two key factors:
 [using-with-static-mesh](using-with-static-mesh/)
 {% endcontent-ref %}
 
-{% content-ref url="using-with-voxel-plugin.md" %}
-[using-with-voxel-plugin.md](using-with-voxel-plugin.md)
+{% content-ref url="voxel-plugin-integration.md" %}
+[voxel-plugin-integration.md](voxel-plugin-integration.md)
 {% endcontent-ref %}

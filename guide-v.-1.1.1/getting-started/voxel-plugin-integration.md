@@ -1,5 +1,7 @@
 # Voxel Plugin Integration
 
+<figure><img src="../../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
+
 {% hint style="danger" %}
 Only Voxel Plugin 2.0 versions 340.0, 340.1, and 340.3 are supported. Compatibility with `dev` versions may be possible by replacing outdated nodes in the Voxel Graph.
 {% endhint %}

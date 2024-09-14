@@ -48,6 +48,6 @@ FAQ: [Discord](https://discord.com/channels/1224220810110308415/1224221149731491
 
 Support: [Discord](https://discord.gg/SvHcuCcjMX)
 
-{% content-ref url="guide-v.-1.1/getting-started/" %}
-[getting-started](guide-v.-1.1/getting-started/)
+{% content-ref url="guide-v.-1.1.1/getting-started/" %}
+[getting-started](guide-v.-1.1.1/getting-started/)
 {% endcontent-ref %}

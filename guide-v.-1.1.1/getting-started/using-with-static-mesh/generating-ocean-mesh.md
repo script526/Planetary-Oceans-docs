@@ -48,4 +48,4 @@ The more triangle count you have, the more expensive it gets for the GPU. The ve
 
 The current limitation of this approach is the inability to achieve a large ocean sphere with sufficient polygon density to produce visually acceptable waves. In the next major update, a dynamic Level of Detail (LOD) system in the form of a quadtree will be implemented, enabling users to create ocean spheres of any size without experiencing any significant performance impact.
 
-Meanwhile, some users are [utilizing](../using-with-voxel-plugin.md) the Voxel Plugin's mesh, which features an octree LOD system that is dynamically updated at runtime.
+Meanwhile, some users are [utilizing](../voxel-plugin-integration.md) the Voxel Plugin's mesh, which features an octree LOD system that is dynamically updated at runtime.
