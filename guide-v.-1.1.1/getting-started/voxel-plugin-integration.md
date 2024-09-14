@@ -16,8 +16,9 @@ Integration with the Voxel Plugin made as easy as it gets.
 
 ### Tips
 
-* You must make sure that `SphereRadius` in `BP_PlanetaryOcean` matches the radius of the sphere in the Voxel Graph. Otherwise, buoyancy will have issues.
+* Make sure that `SphereRadius` in `BP_PlanetaryOcean` matches the radius of the sphere in the Voxel Graph. Otherwise, buoyancy will have issues.
 * If the surface has not enough polygon density for your waves settings, lower the `Voxel Size` in the Voxel Graph.
+* World position of `BP_PlanetaryOcean` should match the world position of the Actor with your Voxel Surface, if you want to use buoyancy.
 * You don't necessarily have to have a solid sphere in the Voxel Graph. You may remove parts of the sphere using noise that represents your continents, so that the surface appears only where the water is supposed to be. This approach may be used to remove water from the areas below continents, if you'd like to dig in there. The only requirement is, all parts of the surface should match the overall shape of a perfect sphere.
 * Ocean material uses material collection parameters that are updated from a `BP_PlanetaryOcean`'s parent class `APlanetaryOcean`. This way, all wave parameters are synchronized with the buoyancy system.
 
