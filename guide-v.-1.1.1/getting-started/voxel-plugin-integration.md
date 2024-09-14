@@ -14,12 +14,12 @@ Integration with the Voxel Plugin made as easy as it gets.
 
 2. Drag and drop the Voxel Graph to the world. Go to the `BP_PlanetaryOcean` and switch the `MeshMode` to the `VoxelPluginsMesh`.
 
-The integration complete. There a couple things you should be aware of:
+### Tips
 
-* Ocean material uses material collection parameters that are updated from a `BP_PlanetaryOcean`'s parent class `APlanetaryOcean`. This way, all wave parameters are synchronized with the buoyancy system.
 * You must make sure that `SphereRadius` in `BP_PlanetaryOcean` matches the radius of the sphere in the Voxel Graph. Otherwise, buoyancy will have issues.
 * If the surface has not enough polygon density for your waves settings, lower the `Voxel Size` in the Voxel Graph.
-* You don't necessarily have to have a solid sphere in the Voxel Graph. You may remove parts of the sphere using noise that represents your continents, so that the surface appears only where you want it to be. This approach may be used to remove water from the areas below continents, if you'd like to dig in there. The only requirement is, all parts of the surface should match the overall shape of a perfect sphere.
+* You don't necessarily have to have a solid sphere in the Voxel Graph. You may remove parts of the sphere using noise that represents your continents, so that the surface appears only where the water is supposed to be. This approach may be used to remove water from the areas below continents, if you'd like to dig in there. The only requirement is, all parts of the surface should match the overall shape of a perfect sphere.
+* Ocean material uses material collection parameters that are updated from a `BP_PlanetaryOcean`'s parent class `APlanetaryOcean`. This way, all wave parameters are synchronized with the buoyancy system.
 
 ### Fixing WPO in Voxel Plugin in UE 5.3
 
